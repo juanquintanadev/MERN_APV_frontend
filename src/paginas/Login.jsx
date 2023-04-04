@@ -49,10 +49,10 @@ const Login = () => {
 
         // try para la comunicacion y posibles errores de login
         try {
-            console.log('antes de la consulta');
+            // console.log('antes de la consulta');
             // esta peticion nos devuelve data, este va acontener la devolucion de nuestro servidor con un JWT que utilizaremos en diferentes lugares de nuestra api
             const {data} = await clienteAxios.post('/veterinarios/login', {email, password});
-            console.log('despues de la consulta');
+            // console.log('despues de la consulta');
 
             // vamos a almacenar el resutaldo JWT en el localStorage
             localStorage.setItem('token', data.token);
