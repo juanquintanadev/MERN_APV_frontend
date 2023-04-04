@@ -52,7 +52,7 @@ const Login = () => {
 
             // esta peticion nos devuelve data, este va acontener la devolucion de nuestro servidor con un JWT que utilizaremos en diferentes lugares de nuestra api
             const {data} = await clienteAxios.post('/veterinarios/login', {email, password});
-            // console.log(data);
+            console.log(data);
 
             // vamos a almacenar el resutaldo JWT en el localStorage
             localStorage.setItem('token', data.token);
